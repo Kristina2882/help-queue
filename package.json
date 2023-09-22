@@ -5,7 +5,7 @@
     "url": "git+https://github.com/Kristina2882/help-queue.git"
   },
   "homepage": "https://Kristina2882.github.io/help-queue/",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
