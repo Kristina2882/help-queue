@@ -10,12 +10,31 @@ import * as a from './../actions';
 class TicketControl extends React.Component {
 constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
         selectedTicket: null,
         editing: false
     };
     
+}
+
+componentDidMount() {
+    this.waitTimeUpdateTimer = setInterval(() => 
+    this.updateTicketElapsedWaitTime(),
+    10000
+    );
+}
+
+componentDidUpdate() {
+    console.log("component updated!");
+}
+
+componentWillMount() {
+    console.log("component unmounted!");
+    clearInterval(this.waitTimeUpdateTimer);
+}
+
+updateTicketElapsedWaitTime = () => {
+    console.log("tick");
 }
 
 handleClick = () =>  {
