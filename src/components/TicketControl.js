@@ -26,19 +26,19 @@ componentDidMount() {
 }
 
 componentWillMount() {
-    console.log("component unmounted!");
     clearInterval(this.waitTimeUpdateTimer);
 }
 
 updateTicketElapsedWaitTime = () => {
     const {dispatch} = this.props;
     Object.values(this.props.mainTicketList).forEach(ticket => {
-        const newFormattedWaitTime = formatDistanceToNow(ticket.timeOpen, {
-            addSuffix: true
-        });
-        const action = a.updateTime(ticket.id,newFormattedWaitTime);
-        dispatch(action);
+     const newFormattedWaitTime = formatDistanceToNow(ticket.timeOpen, {
+          addSuffix: true
+       });
+      const action = a.updateTime(ticket.id, newFormattedWaitTime);
+      dispatch(action);
     });
+    
 }
 
 handleClick = () =>  {

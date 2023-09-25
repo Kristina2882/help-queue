@@ -24,7 +24,7 @@ const reducer = (state = {}, action) => {
       const newTicket = Object.assign({}, state[id], {
       formattedWaitTime
       });
-      const updatedState = ({}, state, {
+      const updatedState =  Object.assign({}, state, {
        [id]: newTicket
       });
       return updatedState;
